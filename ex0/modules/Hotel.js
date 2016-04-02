@@ -2,7 +2,6 @@
 
 var eventEmitter = require('events');
 var eventsConfig = require('./config');
-
 var logger = '';
 
 module.exports = class Hotel extends eventEmitter{
