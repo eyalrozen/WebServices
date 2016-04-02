@@ -18,7 +18,7 @@ module.exports = class Hotel extends eventEmitter{
 	addReview(){
 		this.reviews++;
 		console.log('Review added! ');
-		logger += '\n Review added! \n'+this.info + this.reviews + ' reviews'; // add the console log message to logger
+		logger += '\nReview added! \n'+this.info + this.reviews + ' reviews'; // add the console log message to logger
 		this.emit(eventsConfig.events.REVIEWADDED,this.info + this.reviews + ' reviews'); //fires event with message
 	}
 
@@ -27,7 +27,7 @@ module.exports = class Hotel extends eventEmitter{
 		if(this.reviews >0){
 			this.reviews--;
 			console.log('Review Removed!');
-			logger +='\n Review Removed! \n'+this.info + this.reviews + ' reviews' // add the console log message to logger
+			logger +='\nReview Removed! \n'+this.info + this.reviews + ' reviews' // add the console log message to logger
 			this.emit(eventsConfig.events.REVIEWREMOVED,this.info + this.reviews + ' reviews');//fires event with message
 		}
 		else{ //Trying to decrease the amount of reviews while the amount is 0
